@@ -1,0 +1,274 @@
+/* ================= ROOT VARIABLES ================= */
+/* এখানে সব কালার, ফন্ট এবং কমন ভ্যালু রাখা হয়েছে */
+:root {
+    --primary-color: #ff4d4d;          /* প্রধান লাল রঙ */
+    --secondary-color: #f7f7f7;           /* সেকেন্ডারি কালার */
+    --background-color: #160303;       /* ব্যাকগ্রাউন্ড কালার */
+    --font-family: 'Poppins', sans-serif; /* সাধারণ ফন্ট */
+    --logo-font-family: 'Marck Script', cursive; /* লোগোর ফন্ট */
+    --btn-border-radius: 20px;         /* বাটনের গোল কোণা */
+    --third-color: #474747;           /* তৃতীয় কালার */
+    --sp-font-family: 'Autography', sans-serif; /* স্পেশাল ফন্ট */
+}
+@font-face {
+    font-family: Autography;
+    src: url(Assets/fonts/Autography.otf);
+}
+@font-face {
+    font-family: 'Oswald';
+    src: url(Assets/fonts/Oswald-Regular.ttf);
+}
+/* ================= GLOBAL RESET ================= */
+/* সব এলিমেন্টের ডিফল্ট মার্জিন ও প্যাডিং রিসেট */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;           /* সাইজ কন্ট্রোল সহজ করার জন্য */
+    font-family: var(--font-family);  /* পুরো সাইটে একই ফন্ট */
+    color: var(--secondary-color);        /* ডিফল্ট লেখা কালার */
+}
+
+/* ================= BODY STYLE ================= */
+body {
+    background-color: var(--background-color); /* ব্যাকগ্রাউন্ড কালার */
+    line-height: 1.6;                          /* লেখার উচ্চতা */
+    background-image: url(Assets/hero\ bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+}
+
+/* ================= NAVBAR ================= */
+.nav {
+    display: flex;                  /* এক লাইনে আনতে */
+    align-items: center;            /* vertically center */
+    padding: 20px 10%;              /* ভিতরের স্পেস */
+    top: 0;
+    z-index: 1000;
+    position: sticky;
+}
+
+/* ================= LOGO ================= */
+.Nlogo {
+    font-family: var(--logo-font-family); /* আলাদা ফন্ট */
+    font-size: 2rem;                      /* বড় সাইজ */
+    color: var(--secondary-color);        /* কালার */
+    text-decoration: none;                /* আন্ডারলাইন সরানো */
+}
+
+/* ================= MENU LIST ================= */
+.innav {
+    list-style: none;        /* বুলেট সরানো */
+    display: flex;           /* এক লাইনে আনা */
+    margin-left: auto;       /* ডানে ঠেলে দেওয়া */
+    margin-right: 30px;      /* বাটনের সাথে গ্যাপ */
+}
+
+/* প্রতিটা মেনু আইটেম */
+.innav li {
+    margin: 0 20px;          /* ডান-বাম স্পেস */
+}
+
+/* লিংক স্টাইল */
+.innav li a {
+    text-decoration: none;   /* আন্ডারলাইন সরানো */
+    color: var(--secondary-color);
+    font-weight: 500;
+    transition: 0.3s;        /* হোভার স্মুথ */
+}
+
+/* হোভার ইফেক্ট */
+.innav li a:hover {
+    color: var(--primary-color);   /* লাল কালার */
+    transform: scale(1.1);         /* একটু বড় হবে */
+}
+
+/* ================= BUTTON ================= */
+.btn {
+    padding: 10px 25px;             /* ভিতরের স্পেস */
+    background-color: var(--primary-color); /* লাল কালার */
+    color: white;                   /* লেখা সাদা */
+    text-decoration: none;
+    border-radius: var(--btn-border-radius); /* গোল কোণা */
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+/* বাটন হোভার */
+.btn:hover {
+    background-color: var(--secondary-color); /* কালো */
+    color: var(--background-color);           /* ব্যাকগ্রাউন্ড কালার */
+    transform: scale(1.1) translateY(-3px);   /* হালকা উপরে উঠবে */
+}
+
+.hero{
+    /* background-image: url(Assets/hero\ bg.jpg); */
+    height: calc(100vh);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.txt{
+    font-family: 'Poppins', sans-serif;
+    color: var(--secondary-color);
+    margin-left: 100px;
+    margin-top: 60px;
+    transform: translateY(40px);
+}
+
+.hero h1 {
+    font-family: var(--logo-font-family);
+    font-size: 160px;
+    margin-bottom: -30px;
+}
+
+.hero h2 {
+    font-family: var(--sp-font-family);
+    font-size: 80px;
+    margin-bottom: -10px;
+    color: var(--primary-color);
+}
+.hero h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.hero p {
+    width: 50%;
+    font-size: 20px;
+}
+
+
+.About {
+    height: calc(100vh);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-image: url(Assets/Background\ img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 50px;
+
+}
+
+.About h2 {
+    font-size: 200px;
+    /* text-decoration: underline 3px;
+    text-underline-offset: 50px; */
+    margin-bottom: 20px;
+    font-family: Oswald;
+    color: var(--primary-color);
+}
+
+.About h3 {
+    font-size: 150px;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+    text-shadow: 20px 20px 2px rgba(0, 0, 0, 0.3);
+    font-family: var(--sp-font-family);
+    margin-top: -180px;
+    text-decoration: underline 5px;
+    text-underline-offset: 60px;
+}
+
+.AboutMe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -50px;
+}
+.AboutMe p {
+    width: 60%;
+    font-size: 25px;
+    line-height: 1.8;
+    color: var(--secondary-color);
+    margin-top: 30px;
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: var(--btn-border-radius);
+}
+.AboutMe h1 {
+    font-size: 200px;
+    margin-top: 50px;
+    color: var(--secondary-color);
+    font-family: Oswald, sans-serif;
+    margin-top: -430px;
+    margin-left: -999px;
+
+}
+
+.skills {
+    height: calc(100vh);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(Assets/Background\ img\ 2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;;
+
+}
+
+.My-Skills {
+    font-size: 150px;
+    font-family: Oswald, sans-serif;
+    color: var(--secondary-color);
+    margin-top: -350px;
+}
+
+.GD {
+    font-size: 70px;
+    color: var(--secondary-color);
+    margin-top: -110px;
+    font-family: var(--sp-font-family);
+    color: var(--primary-color);
+    text-shadow: 15px 15px 1px rgba(0, 0, 0, 1.5);
+    text-decoration: underline 4px;
+    text-underline-offset: 40px;
+
+}
+
+.cards {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: -10px;
+    margin-top: 80px;
+}
+.card {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card h1 {
+    font-size: 150px;
+    color: var(--secondary-color);
+    font-family: Oswald, sans-serif;
+    opacity: 0.5;
+}
+
+.card h2 {
+    font-size: 45px;
+    color: var(--secondary-color);
+    font-family: var(--font-family);
+    margin-top: -100px;
+    margin-left: 0px;
+}
+
+.card h3 {
+    font-size: 80px;
+    color: var(--primary-color);
+    font-family: var(--sp-font-family);
+    margin-top: -100px;
+    margin-left: 340px;
+}
