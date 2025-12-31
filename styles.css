@@ -80,7 +80,8 @@ body {
 /* হোভার ইফেক্ট */
 .innav li a:hover {
     color: var(--primary-color);   /* লাল কালার */
-    transform: scale(1.1);         /* একটু বড় হবে */
+    transform: scale(1.1);         /* একটু বড় হবে */
+    transition: 0.5s;
 }
 
 /* ================= BUTTON ================= */
@@ -248,6 +249,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.card:hover  {
+    color: var(--primary-color);
+    transform: scale(1.1);
+    transition: 0.5s;
 }
 
 .card h1 {
